@@ -1,0 +1,5 @@
+# Global variables
+PROJECT_NAME         = Brownie
+PROJECT_VERSION      = 0.0.1
+PROJECT_DESCRIPTION  = Graphical user interface for simulating random walks
+PROJECT_AUTHORS      = Nicolas Lermé
