@@ -1,5 +1,7 @@
-# Global variables
+#--- Variables --------------------------------------------------------------------------------------------
 PROJECT_NAME         = Brownie
-PROJECT_VERSION      = 0.0.1
+PROJECT_VERSION      = 1.0.0
 PROJECT_DESCRIPTION  = Graphical user interface for simulating random walks
 PROJECT_AUTHORS      = Nicolas Lermé
+PROJECT_LICENSE      = LGPL-v3
+PROJECT_LAST_RELEASE = `date`

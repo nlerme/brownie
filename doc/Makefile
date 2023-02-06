@@ -6,12 +6,12 @@ DOCS_DIRS    = `find . -maxdepth 1 -type d -printf "%f " | cut -d' ' -f2- -`
 all:
 	@echo -n "+ Generating doc : "
 	@doxygen $(DOXYGEN_FILE) &>/dev/null
-	@echo "Ok"
+	@echo "OK"
 
 clean:
 	@echo -n "+ Deleting doc : "
 	@for Dir in $(DOCS_DIRS); do \
-		rm -rf $$Dir/*; \
+		\rm -rf $$Dir/*; \
 	done
 	@echo "OK"
 

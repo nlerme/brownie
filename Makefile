@@ -17,13 +17,19 @@ OBJ       = $(SRC:%.$(FILES_EXT)=$(OBJ_DIR)/%.o)
 all: header depend $(OBJ) $(TARGET) footer
 
 header:
-	@echo -e "+-------------------------------------------------------------------------------------------------"
-	@echo -e "| $(PROJECT_NAME) - $(PROJECT_DESCRIPTION)"
-	@echo -e "| Version: v$(PROJECT_VERSION)"
-	@echo -e "| Authors: $(PROJECT_AUTHORS)"
-	@echo -e "+-------------------------------------------------------------------------------------------------\n"
+	@echo "-----------------------------------------------------------------------------"
+	@echo "Project name : $(PROJECT_NAME)"
+	@echo "Description  : $(PROJECT_DESCRIPTION)"
+	@echo "License      : $(PROJECT_LICENSE)"
+	@echo "Version      : $(PROJECT_VERSION)"
+	@echo "Authors      : $(PROJECT_AUTHORS)"
+	@echo "Last release : $(PROJECT_LAST_RELEASE)"
+	@echo -e "-----------------------------------------------------------------------------\n"
 
 depend:
+ifeq ("$(wildcard $(OBJ_DIR))","")
+	@mkdir $(OBJ_DIR)
+endif
 	@echo -n "+ Generate dependencies : "
 ifneq ($(strip $(SRC)),)
 	@$(CXX) $(INC_DIR) -MM $(SRC:%=$(SRC_DIR)/%) \
@@ -43,7 +49,7 @@ $(TARGET): $(OBJ)
 
 clean: clean_doc
 	@echo -n "+ Deleting objects : "
-	@rm -f $(OBJ_DIR)/*.o $(TARGET)
+	@\rm -rf $(OBJ_DIR) $(TARGET)
 	@echo "OK"
 
 doc:
