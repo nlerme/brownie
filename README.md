@@ -1,12 +1,23 @@
 Presentation
 ------------
-Brownie is a C++ graphical user interface intended to simulate random walks on the Z^2 network in an interactive way. It can be for instance used to reproduce the experiment of the [Galton board](https://en.wikipedia.org/wiki/Bean_machine). This software is distributed under LGPL license and is built upon the SDL, freetype, freetype and GLEW libraries. An example extracted from a [video](https://www.youtube.com/watch?v=qhAsa9dmlv0) is given below:
+Brownie is a C++ graphical user interface intended to simulate random walks on the Z^2 network in an interactive way. It can be for instance used to reproduce the experiment of the [Galton board](https://en.wikipedia.org/wiki/Bean_machine). This software is distributed under LGPL license. An example extracted from a [video](https://www.youtube.com/watch?v=qhAsa9dmlv0) is given below:
 
 ![Screenshot](https://i.ibb.co/Z2tW5vt/foobar.png)
 
+Requirements
+------------
+* The [OpenGL](https://opengl.org/) library for handling graphics.
+* The [GLEW](https://glew.sourceforge.net/) library for loading OpenGL extensions.
+* The [SDL1.2](https://www.libsdl.org/) library as window manager.
+* The [freetype](https://freetype.org/) library for fonts rendering.
+
+Compilation
+-----------
+Once the archive decompressed, just type `make` in a terminal.
+
 Execution
 ---------
-Once the archive decompressed, go into the root directory and type `make` in a terminal. Starting points as well as probabilities in the eight directions can modified during simulations using mouse and keyboard.
+The graphical user interface can be executed by typing `./main` in a terminal. Starting points as well as probabilities in the eight directions can be modified during simulations using mouse and keyboard (see instructions).
 
 Documentation
 -------------
